@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+
+    <!-- Tables :
+
+    Tables are nothing but a collection of rows and columns.
+    Each row is called as a TR (Table Row) and each column is called as a TD
+    (Table Data). The table is defined by the table tag.
+    
+    Where we use tables ?
+    - To display data in a tabular format.
+    - Product Comparision
+    - Timetables
+    - Invoice / Bills
+    - Resume
+    -->
+
+    <!-- Basic Table structure -->
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+        <tr>
+            <th colspan="5">EmployeeInformation</th>   
+        </tr>
+
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Experience</th>
+            <th>Location</th>
+        </tr>
+
+    </thead>
+    <tbody>
+            <tr>
+                <td>1</td>
+                <td>G Vamsi Krishna</td>
+                <td>AchieversIT</td>
+                <td rowspan="2">8</td>
+                <td>Hyderabad</td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>Ritika Sharma</td>
+                <td>Infosys</td>
+                <!-- <td>8</td> -->
+                <td>Bangalore</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Amit Verma</td>
+                <td>TCS</td>
+                <td>6</td>
+                <td>Pune</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Swathi Reddy</td>
+                <td>Wipro</td>
+                <td>4</td>
+                <td>Chennai</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Rahul Mehta</td>
+                <td>Capgemini</td>
+                <td>7</td>
+                <td>Noida</td>
+            </tr>
+
+    </tbody>
+</table>
+
+<!-- 2. Product Comparison Table -->
+<h2>Product Comparison</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>Feature</th>
+    <th>Product A</th>
+    <th>Product B</th>
+    <th>Product C</th>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>₹20,000</td>
+    <td>₹22,000</td>
+    <td>₹18,500</td>
+  </tr>
+  <tr>
+    <td>Battery</td>
+    <td>4000mAh</td>
+    <td>4500mAh</td>
+    <td>5000mAh</td>
+  </tr>
+  <tr>
+    <td>Camera</td>
+    <td>48MP</td>
+    <td>64MP</td>
+    <td>50MP</td>
+  </tr>
+</table>
+
+<!--  3. Timetable -->
+<h2>Weekly Timetable</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>Day</th>
+    <th>9am - 10am</th>
+    <th>10am - 11am</th>
+    <th>11am - 12pm</th>
+    <th>12pm - 1pm</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>Math</td>
+    <td>Science</td>
+    <td>English</td>
+    <td>Break</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>History</td>
+    <td>Math</td>
+    <td>Physics</td>
+    <td>Break</td>
+  </tr>
+</table>
+
+
+<!-- 4. Invoice Bills -->
+
+<h2>Invoice</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>Item</th>
+    <th>Qty</th>
+    <th>Unit Price</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Mobile</td>
+    <td>1</td>
+    <td>₹15,000</td>
+    <td>₹15,000</td>
+  </tr>
+  <tr>
+    <td>Headphones</td>
+    <td>2</td>
+    <td>₹2,000</td>
+    <td>₹4,000</td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Grand Total</strong></td>
+    <td><strong>₹19,000</strong></td>
+  </tr>
+</table>
+
+
+<!-- 5 Resume Builder -->
+<h2>Resume</h2>
+<table border="1" cellpadding="10" width="100%" cellspacing="0">
+  <tr>
+    <td><strong>Name</strong></td>
+    <td>G Vamsi Krishna</td>
+  </tr>
+  <tr>
+    <td><strong>Email</strong></td>
+    <td>vamsee@example.com</td>
+  </tr>
+  <tr>
+    <td><strong>Education</strong></td>
+    <td>B.Tech in CSE, JNTU Hyderabad</td>
+  </tr>
+  <tr>
+    <td><strong>Skills</strong></td>
+    <td>HTML, CSS, JavaScript, React</td>
+  </tr>
+  <tr>
+    <td><strong>Experience</strong></td>
+    <td>8 Years in Web Development</td>
+  </tr>
+</table>
+
+    
+</body>
+</html>
