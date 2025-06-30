@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AchieversITLatest</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+
+  <style>
+    /* Header */
+    header {
+      background-color: #212529;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header .logo img {
+      height: 40px;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav.navbar a:hover {
+      color: #ffc107;
+    }
+
+    /* Carousel */
+    .carousel-inner img {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* Our Team Section */
+    .ourTeam {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .ourTeamTitle {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #343a40;
+    }
+
+    .ourTeamTitleDivider {
+      width: 60px;
+      height: 4px;
+      background-color: #007bff;
+      margin: 0 auto 40px auto;
+      border: none;
+    }
+
+    .ourTeamProfiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .profileCard {
+      width: 300px;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .profileCard:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .profileCard img {
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #e9ecef;
+      margin-bottom: 20px;
+    }
+
+    .profileName {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #212529;
+      margin-bottom: 8px;
+    }
+
+    .profileDesignation {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    /* Infrastructure Section */
+    .ourInrastructure {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .ourInrastructure h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+
+    .ourInrastructure h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #007bff;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    .ourInrastructure video {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Audio Section */
+    .audioSection {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .audioSection h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+
+    .audioSection h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #007bff;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    .audioSection audio {
+      width: 100%;
+      max-width: 500px;
+      outline: none;
+      margin-top: 20px;
+    }
+
+    /* YouTube Video Section */
+    .youtubeSection {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    }
+
+    .youtubeSection h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 30px;
+    }
+
+    .youtubeSection h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+    border-radius: 5px;
+    }
+
+    .youtubeSection .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    }
+
+    .youtubeSection .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Footer */
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px 0;
+      text-align: center;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AitLogo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">AllCourses</a></li>
+        <li><a href="#">Placements</a></li>
+        <li><a href="#">Internships</a></li>
+        <li><a href="#">Existing Students</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Carousel Section -->
+    <section aria-label="Hero Carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/32720376/pexels-photo-32720376.jpeg" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/32727608/pexels-photo-32727608.jpeg" class="d-block w-100" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="ourTeam">
+      <h2 class="ourTeamTitle">Our Team</h2>
+      <hr class="ourTeamTitleDivider" />
+      <div class="ourTeamProfiles">
+        <div class="profileCard">
+          <img src="/assets/images/ceo.jpg" alt="CEO Anjali - AchieversIT">
+          <h3 class="profileName">Anjali</h3>
+          <p class="profileDesignation">Chief Executive Officer (CEO)</p>
+        </div>
+        <div class="profileCard">
+          <img src="/assets/images/chairMan.jpg" alt="Chairman Lokesh - AchieversIT">
+          <h3 class="profileName">Lokesh</h3>
+          <p class="profileDesignation">Chairman</p>
+        </div>
+        <div class="profileCard">
+          <img src="/assets/images/manager.jpg" alt="Operations Manager Thanmayee - AchieversIT">
+          <h3 class="profileName">Thanmayee</h3>
+          <p class="profileDesignation">Operations Manager</p>
+        </div>
+        <div class="profileCard">
+          <img src="/assets/images/hr.jpg" alt="HR Head Sneha - AchieversIT">
+          <h3 class="profileName">Sneha</h3>
+          <p class="profileDesignation">Head of Human Resources</p>
+        </div>
+        <div class="profileCard">
+          <img src="/assets/images/teamLead.jpg" alt="Team Lead Rakesh - AchieversIT">
+          <h3 class="profileName">Rakesh</h3>
+          <p class="profileDesignation">Technical Team Lead</p>
+        </div>
+        <div class="profileCard">
+          <img src="/assets/images/andrew.jpg" alt="Senior Developer Andrew - AchieversIT">
+          <h3 class="profileName">Andrew</h3>
+          <p class="profileDesignation">Senior Full Stack Developer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Infrastructure Section -->
+    <section class="ourInrastructure">
+      <h2>Our Infrastructure</h2>
+      <video controls loop poster="/assets/images/chairMan.jpg" height="400px">
+        <source src="/assets/video/10182004-hd_3240_2160_24fps.mp4" type="video/mp4">
+        <source src="/assets/video/10182004-hd_3240_2160_24fps.ogg" type="video/ogg">
+        <source src="/assets/video/10182004-hd_3240_2160_24fps.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- User Opinion Audio Section -->
+    <section class="audioSection">
+      <h2>User Opinions</h2>
+      <audio controls loop autoplay muted>
+        <source src="/assets/audio/ek_raat_vilen.mp3" type="audio/mp3">
+        <source src="/assets/audio/ek_raat_vilen.ogg" type="audio/ogg">
+        <source src="/assets/audio/ek_raat_vilen.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="youtubeSection">
+        <h2>Student Talk on YouTube</h2>
+
+        <div class="videoWrapper">
+            <iframe src="https://www.youtube.com/embed/YxkcMszKEYY?si=sopuSCpsoENKgTTL" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AchieversIT. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</body>
+</html>
