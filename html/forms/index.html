@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML5 Form Inputs</title>
+</head>
+<body>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <h1>Types of Inputs in HTML5</h1>
+
+    <!-- Text input with placeholder, required, autofocus -->
+    <label for="firstName">First Name: </label>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required autofocus minlength="3" maxlength="10">
+    <br><br>
+
+    <!-- Last name text input -->
+    <label for="lastName">Last Name: </label>
+    <input type="text" id="lastName" name="lastName">
+    <br><br>
+
+    <!-- Email input with validation -->
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <!-- Telephone input -->
+    <label for="phoneNumber">Phone Number: </label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[6-9][0-9]{9}" title="Enter 10-digit mobile number" required>
+    <br><br>
+
+    <!-- Password input -->
+    <label for="password">Password: </label>
+    <input type="password" id="password" name="password" minlength="6" maxlength="16" autocomplete="new-password" required>
+    <br><br>
+
+    <!-- Number input -->
+    <label for="age">Age: </label>
+    <input type="number" id="age" name="age" min="1" max="120" step="1">
+    <br><br>
+
+    <!-- File input -->
+    <label for="resume">Upload Resume: </label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+    <br><br>
+
+    <!-- Range input -->
+    <label for="priceRange">Price Range (0-1000): </label>
+    <input type="range" id="priceRange" name="priceRange" min="0" max="1000" step="10">
+    <br><br>
+
+    <!-- Date input -->
+    <label for="dob">Date of Birth: </label>
+    <input type="datetime-local" id="dob" name="dob">
+    <br><br>
+
+    <!-- Time input -->
+    <label for="meetingTime">Meeting Time: </label>
+    <input type="time" id="meetingTime" name="meetingTime">
+    <br><br>
+
+    <!-- Color picker input -->
+    <label for="favColor">Favorite Color: </label>
+    <input type="color" id="favColor" name="favColor">
+    <br><br>
+
+    <!-- URL input -->
+    <label for="website">Your Website: </label>
+    <input type="url" id="website" name="website" placeholder="https://example.com">
+    <br><br>
+
+    <!-- Search input -->
+    <label for="search">Search Here: </label>
+    <input type="search" id="search" name="search">
+    <br><br>
+
+    <!-- Hidden input (used for tokens or static values) -->
+    <input type="hidden" name="userType" value="student">
+
+    <!-- Read-only input -->
+    <label for="country">Country: </label>
+    <input type="text" id="country" name="country" value="India" readonly>
+    <br><br>
+
+    <!-- Disabled input -->
+    <label for="disabledInput">This field is disabled: </label>
+    <input type="text" id="disabledInput" name="disabledInput" value="Can't Edit" disabled>
+    <br><br>
+
+    <!-- Radio buttons for gender -->
+    <label>Gender:</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+    <br><br>
+
+    <!-- Checkbox group -->
+    <label>Hobbies:</label>
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label>
+
+    <input type="checkbox" id="painting" name="hobbies" value="painting">
+    <label for="painting">Painting</label>
+
+    <input type="checkbox" id="swimming" name="hobbies" value="swimming">
+    <label for="swimming">Swimming</label>
+
+    <input type="checkbox" id="dancing" name="hobbies" value="dancing">
+    <label for="dancing">Dancing</label>
+    <br><br>
+
+    <!-- Datalist for suggestions -->
+    <label for="city">Choose your City: </label>
+    <input list="cities" id="city" name="city">
+    <datalist id="cities">
+      <option value="Hyderabad">
+      <option value="Bangalore">
+      <option value="Chennai">
+      <option value="Delhi">
+    </datalist>
+    <br><br>
+
+    <!-- Submit and reset buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
+</body>
+</html>
